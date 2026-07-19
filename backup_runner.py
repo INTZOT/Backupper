@@ -22,6 +22,15 @@ import zipfile
 from datetime import datetime, timedelta
 from pathlib import Path
 
+# Enable ANSI escape codes on Windows terminal
+if sys.platform == "win32":
+    import ctypes
+    kernel32 = ctypes.windll.kernel32
+    for handle in (-11, -12):
+        mode = ctypes.c_uint32()
+        kernel32.GetConsoleMode(kernel32.GetStdHandle(handle), ctypes.byref(mode))
+        kernel32.SetConsoleMode(kernel32.GetStdHandle(handle), mode.value | 0x0004)
+
 # ---------------------------------------------------------------------------
 # Config
 # ---------------------------------------------------------------------------
