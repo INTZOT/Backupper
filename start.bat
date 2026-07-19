@@ -12,7 +12,7 @@ choice /c yn /m "Open python.org download page? [y/n]"
 
 if errorlevel 2 exit /b
 start "" https://www.python.org/downloads/
-echo Please restart after installing Python.
+echo Please install Python 3.9+ (recommended: 3.12) then restart.
 pause
 exit /b
 
