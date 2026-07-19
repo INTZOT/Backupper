@@ -9,3 +9,6 @@ server_output.log
 .venv/
 venv/
 .env
+.agents/
+Server-test/
+*.zip
