@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pyo
+backups/
+config.json
+*.log
+server_output_*.log
+server_output.log
+.venv/
+venv/
+.env
