@@ -8,28 +8,10 @@ echo ========================================
 echo   Python not installed / not in PATH.
 echo ========================================
 echo.
-echo   [1] Install from Microsoft Store
-echo   [2] Download from python.org
-echo   [3] Try winget install
-echo   [4] Exit
-echo.
-choice /c 1234 /m "Choose"
+choice /c yn /m "Open python.org download page? [y/n]"
 
-if errorlevel 4 exit /b
-if errorlevel 3 (
-    winget install Python.Python.3.12 --silent
-    goto end
-)
-if errorlevel 2 (
-    start "" https://www.python.org/downloads/
-    goto end
-)
-if errorlevel 1 (
-    start "" https://apps.microsoft.com/detail/9PJPW5LDXLZ5
-    goto end
-)
-
-:end
+if errorlevel 2 exit /b
+start "" https://www.python.org/downloads/
 echo Please restart after installing Python.
 pause
 exit /b
