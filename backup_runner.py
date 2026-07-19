@@ -102,7 +102,7 @@ def load_config():
 
 
 def _read_config_robust():
-    """Read config.json, auto-fix Windows backslash paths like D:\path."""
+    """Read config.json, auto-fix Windows backslash paths like D:/path."""
     with open(CONFIG_PATH, "r", encoding="utf-8") as f:
         raw = f.read()
     try:
